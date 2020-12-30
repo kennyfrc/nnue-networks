@@ -13,7 +13,7 @@ You can play against these bots at Lichess through these links:
 
 ## Play on your computer
 
-If you want a local version on your computer, fork my [cfish repository](https://github.com/kennyfrc/Cfish) and follow the instructions there. I've made 3 branches named `elo1200`, `elo1600`, and `elo2300`. I know the elos there and at lichess are inconsistent. Fill fix those on a later date.
+If you want a local version on your computer, fork my [cfish repository](https://github.com/kennyfrc/Cfish) and follow the instructions there. I've made 3 branches named `elo1200`, `elo1600`, and `elo2300`. I know the elos there and at lichess are inconsistent. Will fix those on a later date.
 
 ## Just the nets
 
