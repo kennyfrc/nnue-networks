@@ -1,41 +1,40 @@
 # Human-like NNUE Networks
 
-This repository contains networks that I've developed with the goal to create various human-like styles.
+This repository contains networks that I've developed with the goal to create various human-like styles. 
 
-## Usage
+This is inspired by the Maia chess project and I wanted to make versions for [Stockfish NNUE](https://github.com/CSSLab/maia-chess). The con of the Maia bots is that it had endgame and tactical problems. Most engines are either too strong tactically or positionally. This aims to provide a more authentic sparring experience for players.
 
-Download any of the nets under releases.
+## Play At Lichess
 
-[Clone my fork of Cfish](https://github.com/kennyfrc/Cfish/tree/nps), which allows you to lower the nodes per second, achieving play that is commensurate with your ELO.
+You can play against these bots at Lichess through these links:
+* [nnuehuman1200](https://lichess.org/@/nnuehuman1200)
+* [nnuehuman1500](https://lichess.org/@/nnuehuman1500)
+* [nnuehuman2400](https://lichess.org/@/nnuehuman2400)
 
-When compiling, make sure you use `pure=yes` and `nnue=yes`.
+## Play on your computer
 
-In that fork, I've modified `nodestime` (UCI option) to use nodes per second instead of nodes per millisecond.
+If you want a local version on your computer, fork my [cfish repository](https://github.com/kennyfrc/Cfish) and follow the instructions there. I've made 3 branches named `elo1200`, `elo1600`, and `elo2300`. I know the elos there and at lichess are inconsistent. Fill fix those on a later date.
 
-These are the recommended settings based on ELO (rough estimates):
-```
-ELO   nodestime
-1500  100
-1800  10000
-2000  100000
-2500  2000000
-```
+## Just the nets
 
-Set the weight within `EvalFile`
+See [releases](https://github.com/kennyfrc/nnue-networks/releases).
 
 
-## Roadmap
+## Fixed NPS testing results
 
-The first network developed is based on 600 million human games played OTB (from Caissabase) and [Rodent IV's](https://github.com/nescitus/rodent-iv) Moprhy personality (i.e. active, attacking, centralizing, and sacrifical playstyle). This is currently about 70 elo stronger than SF10.
+An interesting observation from my fixed NPS testing is that if you pool together 1200, 1500, and 2400 in a 50k nps tournament (used `tc=40/60`), the estimated elos perfectly arrange themselves into 1200, 1500, and 2400. 
 
 ```
-Score of evil-morty-0.1 vs stockfish-10: 54 - 34 - 12 [0.600]
-...      evil-morty-0.1 playing White: 29 - 12 - 9  [0.670] 50
-...      evil-morty-0.1 playing Black: 25 - 22 - 3  [0.530] 50
-...      White vs Black: 51 - 37 - 12  [0.570] 100
-Elo difference: 70.4 +/- 65.8, LOS: 98.3 %, DrawRatio: 12.0 %
-100 of 100 games finished.
+Rank  Name  Elo +/- Games Wins  Losses  Draws Points  Score Draw
+
+1 cfish-kb2300  657 176 180 173 1 6 176.0 97.8% 3.3%
+
+2 shredder-1500 -54 50  180 71  99  10  76.0  42.2% 5.6%
+
+3 cfish-l1600 -62 50  180 69  101 10  74.0  41.1% 5.6%
+
+4 cfish-l1200 -253  63  180 29  141 10  34.0  18.9% 5.6%
+
+
+360 of  360 games finished.
 ```
-
-Future considerations include developing the NNUE version of the [Maia chess project](https://github.com/CSSLab/maia-chess) (and eliminate its endgame problems). And targeted training around a particular player.
-
