@@ -22,7 +22,7 @@ See [releases](https://github.com/kennyfrc/nnue-networks/releases).
 
 ## Fixed NPS testing results
 
-An interesting observation from my fixed NPS testing is that if you pool together 1200, 1500, and 2300 in a 50k nps tournament (used `tc=40/60`), the estimated elos perfectly arrange themselves into 1200 and 1500. Only the 2300 net is different, but we can chalk it up to "grandmasters search deeper anyway". Added Shredder pegged at 1500 elo to provide a baseline. Book used is noomen 30.
+An interesting observation from my fixed NPS testing is that if you pool together 1200, 1500, and 2300 in a 50k nps tournament (used `tc=40/60`), the estimated elos perfectly arrange themselves into 1200 and 1500. Only the 2300 net is different, but if you search on full nodes (see next test), then the elos start to look better. I've only tested on 180 games, so probably with more datapoints, the gaps will look right. Also added Shredder pegged at 1500 elo to provide a baseline. Book used is noomen 30.
 
 ```
 Rank Name                          Elo     +/-   Games   Score    Draw
