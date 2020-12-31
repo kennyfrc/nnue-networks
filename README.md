@@ -43,24 +43,14 @@ Rank  Name  Elo +/- Games Wins  Losses  Draws Points  Score Draw
 
 ## Normal testing conditions
 
-Without the nps limit, it's surprisingly weaker than [simpleEval](https://lichess.org/@/simpleEval), which is also stockfish but with just material counting. Added Shredder pegged at 2300 elo to provide a baseline.
-
-Better data as I find time.
+Without the nps limit, it's surprisingly weaker than [simpleEval](https://lichess.org/@/simpleEval), which is also stockfish but with just material counting (estimated at 2200 elo).
 
 ```
-Rank Name         Elo +/- Games Wins Losses Draws Points Score Draw
-
-1 stockfish-simpleEval  253 59 180 135 23 22 146.0 81.1% 12.2%
-
-2 shredder-2300     140 50 180 110 41 29 124.5 69.2% 16.1%
-
-3 cfish-l1600         -33 49 180 75 92 13 81.5 45.3% 7.2%
-
-4 cfish-l1200        -533 134 180 6 170 4 8.0 4.4% 2.2%
-
-  
-
-360 of 360 games finished.
+Rank Name         Elo +/- Games Wins Losses Draws Points Rank Name                          Elo     +/-   Games   Score    Draw
+   1 cfish-2300                    618     204     180   97.2%    1.1%
+   2 stockfish-simpleEval          125      54     180   67.2%    2.2%
+   3 cfish-1600                   -166      57     180   27.8%    1.1%
+   4 cfish-1200                   -430     103     180    7.8%    0.0%
 ```
 
 ## Special Thanks
