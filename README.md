@@ -22,28 +22,19 @@ See [releases](https://github.com/kennyfrc/nnue-networks/releases).
 
 ## Fixed NPS testing results
 
-An interesting observation from my fixed NPS testing is that if you pool together 1200, 1500, and 2400 in a 50k nps tournament (used `tc=40/60`), the estimated elos perfectly arrange themselves into 1200, 1500, and 2400. Added Shredder pegged at 1500 elo to provide a baseline.
-
-Better data as I find time.
+An interesting observation from my fixed NPS testing is that if you pool together 1200, 1500, and 2400 in a 50k nps tournament (used `tc=40/60`), the estimated elos perfectly arrange themselves into 1200, 1500, and 2400. Added Shredder pegged at 1500 elo to provide a baseline. Book used is noomen 30.
 
 ```
-Rank  Name  Elo +/- Games Wins  Losses  Draws Points  Score Draw
-
-1 cfish-kb2300  657 176 180 173 1 6 176.0 97.8% 3.3%
-
-2 shredder-1500 -54 50  180 71  99  10  76.0  42.2% 5.6%
-
-3 cfish-l1600 -62 50  180 69  101 10  74.0  41.1% 5.6%
-
-4 cfish-l1200 -253  63  180 29  141 10  34.0  18.9% 5.6%
-
-
-360 of  360 games finished.
+Rank Name                          Elo     +/-   Games   Score    Draw
+   1 cfish-2300                    338      69     180   87.5%   10.6%
+   2 shredder-1500                  49      49     180   56.9%    8.3%
+   3 cfish-1600                    -47      49     180   43.3%    7.8%
+   4 cfish-1200                   -342      75     180   12.2%    5.6%
 ```
 
 ## Normal testing conditions
 
-Without the nps limit, it's surprisingly weaker than [simpleEval](https://lichess.org/@/simpleEval), which is also stockfish but with just material counting (estimated at 2200 elo).
+Without the nps limit, it's surprisingly weaker than [simpleEval](https://lichess.org/@/simpleEval), which is also stockfish but with just material counting (estimated at 2200 elo). Book used is noomen 30.
 
 ```
 Rank Name                          Elo     +/-   Games   Score    Draw
