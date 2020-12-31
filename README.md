@@ -62,3 +62,7 @@ Rank Name         Elo +/- Games Wins Losses Draws Points Score Draw
 
 360 of 360 games finished.
 ```
+
+## Special Thanks
+
+Special thanks to dkappe for helping pioneer the supervised learning trend for both Leela and Stockfish NNUE. Here's his [repository](https://github.com/dkappe/leela-chess-weights/wiki/) and [patreon](https://www.patreon.com/badgyal/posts). I also used his Kingbase 2300 data played to terminal to supplement my Caissabase data. Thanks as well to [Maia's project team](https://github.com/CSSLab/maia-chess) for renewing interest on AI that simulates human behavior.
