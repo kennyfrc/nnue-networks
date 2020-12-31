@@ -46,7 +46,7 @@ Rank  Name  Elo +/- Games Wins  Losses  Draws Points  Score Draw
 Without the nps limit, it's surprisingly weaker than [simpleEval](https://lichess.org/@/simpleEval), which is also stockfish but with just material counting (estimated at 2200 elo).
 
 ```
-Rank Name         Elo +/- Games Wins Losses Draws Points Rank Name                          Elo     +/-   Games   Score    Draw
+Rank Name                          Elo     +/-   Games   Score    Draw
    1 cfish-2300                    618     204     180   97.2%    1.1%
    2 stockfish-simpleEval          125      54     180   67.2%    2.2%
    3 cfish-1600                   -166      57     180   27.8%    1.1%
