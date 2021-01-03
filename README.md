@@ -44,6 +44,14 @@ Rank Name                          Elo     +/-   Games   Score    Draw
    4 cfish-1200                   -430     103     180    7.8%    0.0%
 ```
 
+## Improvement Areas
+
+The ratings bins aren't perfect. What can be done to further improve the experience:
+* For the 1600 network, use a rating bin between 1200-1600.
+* For the 2400 network, use a rating bin between 1600 to 2300 and replace the kingbase data.
+
+That said, I would say that the experiment is a success so far for the 1200 version. Currently, the 1600 bot captures some bad habits from the <= 1200 elo bins and the 2400 is too strong. The above two changes should help fix that.
+
 ## Special Thanks
 
 Special thanks to dkappe for helping pioneer the supervised learning trend for both Leela and Stockfish NNUE. Here's his [repository](https://github.com/dkappe/leela-chess-weights/wiki/) and [patreon](https://www.patreon.com/badgyal/posts). I also used his Kingbase 2300 data played to terminal to supplement my Caissabase data. Thanks as well to [Maia's project team](https://github.com/CSSLab/maia-chess) for renewing interest on AI that simulates human behavior.
